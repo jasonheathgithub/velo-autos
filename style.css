@@ -1,0 +1,175 @@
+/* style.css — VELO Design System */
+
+/* =============================================
+   TYPE SCALE — fluid clamp()
+   ============================================= */
+:root {
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.9rem  + 0.5vw,  1.125rem);
+  --text-lg:   clamp(1.125rem, 0.95rem + 0.85vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1rem    + 1.5vw,  2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+  --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+
+  /* =============================================
+     4px SPACING SYSTEM
+     ============================================= */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* =============================================
+     RADIUS
+     ============================================= */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* =============================================
+     TRANSITIONS
+     ============================================= */
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* =============================================
+     CONTENT WIDTHS
+     ============================================= */
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+  --content-full: 100%;
+
+  /* =============================================
+     FONTS — Space Grotesk + Inter
+     ============================================= */
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* =============================================
+   VELO COLOR PALETTE — LIGHT MODE
+   ============================================= */
+:root, [data-theme="light"] {
+  /* Surfaces */
+  --color-bg:               #F5F7FA;  /* Arctic White */
+  --color-surface:          #FFFFFF;
+  --color-surface-2:        #F0F2F6;
+  --color-surface-offset:   #E8ECF2;
+  --color-surface-offset-2: #DDE2EA;
+  --color-surface-dynamic:  #D6DCE7;  /* Chrome Mist */
+  --color-divider:          #D6DCE7;  /* Chrome Mist */
+  --color-border:           #C4CAD6;
+
+  /* Text */
+  --color-text:             #0D0F14;  /* Midnight Carbon */
+  --color-text-muted:       #8A9BB5;  /* Steel Horizon */
+  --color-text-faint:       #B0BCCC;
+  --color-text-inverse:     #F5F7FA;  /* Arctic White */
+
+  /* Primary Accent — Deep Cobalt */
+  --color-primary:          #1A3CFF;
+  --color-primary-hover:    #0F2BD9;
+  --color-primary-active:   #0A1FB3;
+  --color-primary-highlight: #E0E5FF;
+
+  /* Secondary Accent — Velocity Orange (sparingly) */
+  --color-accent:           #FF5C1A;
+  --color-accent-hover:     #E54D10;
+  --color-accent-highlight: #FFF0EB;
+
+  /* Semantic */
+  --color-success:          #22A05B;
+  --color-error:            #DC2626;
+  --color-warning:          #E68A00;
+
+  /* Shadows — tone-matched */
+  --shadow-sm: 0 1px 2px oklch(0.2 0.02 250 / 0.06);
+  --shadow-md: 0 4px 12px oklch(0.2 0.02 250 / 0.08);
+  --shadow-lg: 0 12px 32px oklch(0.2 0.02 250 / 0.12);
+}
+
+/* =============================================
+   VELO COLOR PALETTE — DARK MODE
+   ============================================= */
+[data-theme="dark"] {
+  /* Surfaces — Midnight Carbon foundation */
+  --color-bg:               #0D0F14;
+  --color-surface:          #131620;
+  --color-surface-2:        #181C28;
+  --color-surface-offset:   #1C2030;
+  --color-surface-offset-2: #222638;
+  --color-surface-dynamic:  #2A2E40;
+  --color-divider:          #2A2E40;
+  --color-border:           #353A4E;
+
+  /* Text */
+  --color-text:             #F5F7FA;  /* Arctic White */
+  --color-text-muted:       #8A9BB5;  /* Steel Horizon */
+  --color-text-faint:       #5A6680;
+  --color-text-inverse:     #0D0F14;  /* Midnight Carbon */
+
+  /* Primary — Deep Cobalt (brighter for dark bg) */
+  --color-primary:          #4D6AFF;
+  --color-primary-hover:    #3B55F0;
+  --color-primary-active:   #2B44E0;
+  --color-primary-highlight: #1E2548;
+
+  /* Accent — Velocity Orange */
+  --color-accent:           #FF6E33;
+  --color-accent-hover:     #FF5C1A;
+  --color-accent-highlight: #2E1E14;
+
+  /* Semantic */
+  --color-success:          #34C06F;
+  --color-error:            #F87171;
+  --color-warning:          #FBBF24;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.4);
+  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.5);
+}
+
+/* System preference fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg:               #0D0F14;
+    --color-surface:          #131620;
+    --color-surface-2:        #181C28;
+    --color-surface-offset:   #1C2030;
+    --color-surface-offset-2: #222638;
+    --color-surface-dynamic:  #2A2E40;
+    --color-divider:          #2A2E40;
+    --color-border:           #353A4E;
+    --color-text:             #F5F7FA;
+    --color-text-muted:       #8A9BB5;
+    --color-text-faint:       #5A6680;
+    --color-text-inverse:     #0D0F14;
+    --color-primary:          #4D6AFF;
+    --color-primary-hover:    #3B55F0;
+    --color-primary-active:   #2B44E0;
+    --color-primary-highlight: #1E2548;
+    --color-accent:           #FF6E33;
+    --color-accent-hover:     #FF5C1A;
+    --color-accent-highlight: #2E1E14;
+    --color-success:          #34C06F;
+    --color-error:            #F87171;
+    --color-warning:          #FBBF24;
+    --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.3);
+    --shadow-md: 0 4px 12px oklch(0 0 0 / 0.4);
+    --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.5);
+  }
+}
