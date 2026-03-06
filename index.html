@@ -83,7 +83,7 @@
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
       <div class="header__actions">
-        <a href="#cta" class="btn btn--primary btn--sm">Get Free Audit</a>
+        <a href="#" data-cal-link="velo-autos/free-ad-audit" data-cal-config='{"layout":"month_view"}' class="btn btn--primary btn--sm">Get Free Audit</a>
         <button class="hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -98,7 +98,7 @@
       <a href="#features" class="mobile-nav__link">Features</a>
       <a href="#pricing" class="mobile-nav__link">Pricing</a>
       <a href="#faq" class="mobile-nav__link">FAQ</a>
-      <a href="#cta" class="btn btn--primary" style="margin-top:var(--space-4);text-align:center;">Get Free Audit</a>
+      <a href="#" data-cal-link="velo-autos/free-ad-audit" data-cal-config='{"layout":"month_view"}' class="btn btn--primary" style="margin-top:var(--space-4);text-align:center;">Get Free Audit</a>
     </nav>
   </div>
 
@@ -114,7 +114,7 @@
         <h1 class="hero__title fade-in">Your Dealership's Ads.<br>Powered by AI.</h1>
         <p class="hero__subtitle fade-in">VELO uses artificial intelligence to research your market, create scroll-stopping ad creatives, and manage your entire Facebook &amp; Instagram ad campaigns — at a fraction of the cost of a traditional agency.</p>
         <div class="hero__cta fade-in">
-          <a href="#cta" class="btn btn--primary btn--lg">Get Your Free Ad Audit</a>
+          <a href="#" data-cal-link="velo-autos/free-ad-audit" data-cal-config='{"layout":"month_view"}' class="btn btn--primary btn--lg">Get Your Free Ad Audit</a>
           <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
         </div>
       </div>
@@ -432,7 +432,7 @@
         <div class="cta__content fade-in">
           <h2 class="cta__title">Ready to sell more cars?</h2>
           <p class="cta__subtitle">Get a free audit of your current ad performance and see exactly how VELO can improve your results.</p>
-          <a href="mailto:velo.autos@gmail.com?subject=Free Ad Audit Request" class="btn btn--primary btn--lg">Get Your Free Ad Audit</a>
+          <a href="#" data-cal-link="velo-autos/free-ad-audit" data-cal-config='{"layout":"month_view"}' class="btn btn--primary btn--lg">Get Your Free Ad Audit</a>
           <p class="cta__note">No commitment. No credit card. Just results.</p>
         </div>
       </div>
@@ -472,6 +472,14 @@
   </footer>
 
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+  <!-- Cal.com Embed -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://cal.com"});
+    Cal("ui", {"theme":"dark","styles":{"branding":{"brandColor":"#1A3CFF"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+
   <script src="./app.js" defer></script>
 </body>
 </html>
